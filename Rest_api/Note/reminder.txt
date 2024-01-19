@@ -1,0 +1,20 @@
+# in order to connect with the database you need to 
+1) install pymysql with pi3
+   pip3 install pymysql
+
+2) you as well need need to install cryptography for generating hash connection with mysql
+   pi3 install cryptography
+
+
+here are some database connection format for mysql and flask_sqlalquemy
+optional driver = dialect+driver://username:password@host:port/database
+
+1) mysql
+   mysql://scott:tiger@localhost/mydatabase
+
+2) postgresql
+   postgresql://scott:tiger@localhost/mydatabase
+
+3) oracle
+   oracle://scott:tiger@127.0.0.1:1521/sidname
+   

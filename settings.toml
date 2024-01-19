@@ -1,0 +1,33 @@
+name = "testing"
+version = "0.1.1"
+project = "techy.co"
+
+# using some table demonstration
+[configuration]
+items = [1, 2, 3, 4]
+data = ["romeus", "clarens", "prophete", "allrich"]
+
+# sub table also called table inheritance
+[configuration.database]
+port = 4400
+database_name = "mysql"
+# sub fields
+tables.first = "students"
+tables.second = "administrators"
+tables.third = "teachers"
+
+[students]
+primary = [
+    { "Firstname" = "Romika", "Lastname" = "romeus" },
+    { "Firstnam" = "Clervil", "Lastname" = "woodlet" },
+]
+
+# Grouped table
+[[administrators]]
+teachers = 454
+
+[[administrators]]
+students = 23
+
+[[administrators]]
+admins = 22
